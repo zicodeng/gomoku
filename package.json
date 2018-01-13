@@ -5,7 +5,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --project . --watch"
+    "build": "tsc --project . --watch",
+    "start": "tsc -p . && node ./build/app.js"
   },
   "author": "Zico Deng",
   "license": "ISC",
