@@ -1,3 +1,9 @@
-# Tic-Tac-Toe
+# Tic-Tac-Toe + Gomoku (a.k.a. Gobang)
 
-This repository contains code for a 2-player Tic-Tac-Toe game playable on the command-line, created for the [Software Architecture](https://canvas.uw.edu/courses/1186629) course at the UW iSchool.
+This repo contains source code for creating either traditional Tic-Tac-Toe or Gomoku (https://en.wikipedia.org/wiki/Gomoku). The game is played through your terminal, and it will keep track of total wins for both two players.
+
+## How to Play?
+
+Node needs to be installed on your computer.
+
+    npm run start
