@@ -89,7 +89,7 @@ const promptForInput = (game: Game): void => {
                 // Report who wins.
                 console.log(message);
                 reportTotalWins(game);
-                promptForReplay(game.type);
+                promptForReplay(game);
             } else {
                 promptForInput(game);
             }
@@ -230,14 +230,16 @@ const updateGame = (input: Input, game: Game): void => {
     game.turn = game.turn === 0 ? 1 : 0;
 };
 
-const promptForReplay = (gameType: string): void => {
+const promptForReplay = (game: Game): void => {
     rl.question(
         'Would you like to play again? (yes/no): ',
         (answer: string) => {
             switch (answer) {
                 case 'yes':
-                    const game = initGame(gameType);
-                    promptForInput(game);
+                    const players = game.players;
+                    const newGame = initGame(game.type);
+                    newGame.players = players;
+                    promptForInput(newGame);
                     break;
 
                 case 'no':
@@ -246,7 +248,7 @@ const promptForReplay = (gameType: string): void => {
                     break;
 
                 default:
-                    promptForReplay(gameType);
+                    promptForReplay(game);
                     break;
             }
         }
