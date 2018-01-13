@@ -360,15 +360,18 @@ const checkForWin = (game: Game): string => {
 
 const concatGameboard = (gameboard: Gameboard): string => {
     const ROW_BREAK = 'B';
+    const EMPTY_CELL_MARK = 'E';
     let concatenatedGameboard = '';
     gameboard.forEach(row => {
         // Convert each row to string.
         let rowStr = '';
         row.forEach(cell => {
-            rowStr += cell;
+            const cellMark = cell ? cell : EMPTY_CELL_MARK;
+            rowStr += cellMark;
         });
         concatenatedGameboard += rowStr + ROW_BREAK;
     });
+
     return concatenatedGameboard;
 };
 
