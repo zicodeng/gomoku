@@ -417,7 +417,7 @@ const diagonalizeGameboard = (gameboard: Gameboard): Gameboard => {
     return diagonalizedGameboard;
 };
 
-// Diagonal: top-right to bottom-left.
+// Anti-diagonal: top-right to bottom-left.
 // Rotate gameboard for -45 degree.
 const antiDiagonalizeGameboard = (gameboard: Gameboard): Gameboard => {
     const size = gameboard.length;
