@@ -28,7 +28,6 @@ type Cell = string;
 
 type Row = Cell[];
 
-// Use Map instead of two-dimensional Array for more efficient cell updating.
 type Gameboard = string[][];
 
 type Error = string;
