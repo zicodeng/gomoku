@@ -11,6 +11,9 @@
   "author": "Zico Deng",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^9.3.0"
+    "@types/node": "^9.6.61"
+  },
+  "dependencies": {
+    "typescript": "^4.3.4"
   }
 }
